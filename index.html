@@ -3,86 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY | Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Best Coding Laptops</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #000428, #004e92, #000428);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: #00d2ff;
+            border-bottom: 2px solid rgba(0, 210, 255, 0.3);
+            padding-bottom: 5px;
+        }
+
+        .laptop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .laptop-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 25px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .laptop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .laptop-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #00d2ff;
+        }
+
+        .laptop-card ul {
+            list-style-type: none;
+        }
+
+        .laptop-card li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .laptop-card li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #00d2ff;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(0, 210, 255, 0.2);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+            color: #00d2ff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .laptop-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <h2 class="logo">
-                    <img src="spide.png" style="width: 82px;height: 42px;">
-                </h2>
+    <div class="container">
+        <header>
+            <h1>Best Laptops for Coding</h1>
+            <p>Powerful machines for developers, tested for performance</p>
+        </header>
+
+        <section>
+            <h2>Windows Laptops</h2>
+            <div class="laptop-grid">
+                
+
+                <!-- HP Spectre x360 14 -->
+                <div class="laptop-card">
+                    <h3>HP Spectre x360 14</h3>
+                    <ul>
+                        <li>Intel Core i7-1360P</li>
+                        <li>16GB RAM | 1TB SSD</li>
+                        <li>3K OLED Touch Display</li>
+                        <li>360° Convertible Design</li>
+                    </ul>
+                    <span class="tag">2-in-1 Powerhouse</span>
+                </div>
+
+                <!-- Lenovo ThinkPad X1 Carbon -->
+                <div class="laptop-card">
+                    <h3>Lenovo ThinkPad X1 Carbon</h3>
+                    <ul>
+                        <li>Intel Core i7 vPro</li>
+                        <li>32GB RAM | 1TB SSD</li>
+                        <li>14" 4K Anti-Glare Display</li>
+                    </ul>
+                </div>
+                <!-- Dell XPS 15 -->
+                <div class="laptop-card">
+                    <h3>Dell XPS 15 (2024)</h3>
+                    <ul>
+                        <li>Intel Core i9 / AMD Ryzen 9</li>
+                        <li>32GB RAM | 1TB SSD</li>
+                        <li>4K OLED Touch Display</li>
+                        <li>NVIDIA RTX 4070 GPU</li>
+                    </ul>
+                </div>
             </div>
-            <ul class="navlist">
-                <li><a href="">Home</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-            
-        </div> 
-    </header>
-    
- <div class="content">
-    <div class="card">
-            <div class="cards">
-            <img src="4 - Copy.jpg" alt="" srcset="">
+        </section>
+
+        <section>
+            <h2>macOS Laptops</h2>
+            <div class="laptop-grid">
+                <!-- MacBook Pro 16" -->
+                <div class="laptop-card">
+                    <h3>MacBook Pro 16" (M3 Max)</h3>
+                    <ul>
+                        <li>Apple M3 Max Chip</li>
+                        <li>48GB RAM | 2TB SSD</li>
+                        <li>Mini-LED 120Hz Display</li>
+                        <li>22-Hour Battery Life</li>
+                    </ul>
+                    <span class="tag">Pro Workstation</span>
+                </div>
+
+                <!-- MacBook Air 15" -->
+                <div class="laptop-card">
+                    <h3>MacBook Air 15" (M2)</h3>
+                    <ul>
+                        <li>Apple M2 Chip</li>
+                        <li>24GB RAM | 1TB SSD</li>
+                        <li>Liquid Retina Display</li>
+                        <li>Fanless Silent Design</li>
+                    </ul>
+                    <span class="tag">Ultra-Portable</span>
+                </div>
             </div>
-    </div>
-    <div class="card">
-        <div class="cards">
-        <img src="4 - Copy.jpg" alt="" srcset="">
-        </div>
-</div>
-<div class="card">
-    <div class="cards">
-    <img src="4 - Copy.jpg" alt="" srcset="">
-    </div>
-</div>
-<div class="card">
-    <div class="cards">
-    <img src="4 - Copy.jpg" alt="" srcset="">
-    </div>
-</div>
-<div class="card">
-    <div class="cards">
-    <img src="4 - Copy.jpg" alt="" srcset="">
-    </div>
-</div>
-<div class="card">
-    <div class="cards">
-    <img src="4 - Copy.jpg" alt="" srcset="">
-    </div>
-</div>
-<div class="card">
-    <div class="cards">
-    <img src="4 - Copy.jpg" alt="" srcset="">
-    </div>
-</div>
-<div class="card">
-    <div class="cards">
-    <img src="4 - Copy.jpg" alt="" srcset="">
-    </div>
-</div>
-<div class="card">
-    <div class="cards">
-    <img src="4 - Copy.jpg" alt="" srcset="">
-    </div>
-</div>
-<div class="card">
-    <div class="cards">
-    <img src="4 - Copy.jpg" alt="" srcset="">
-    </div>
-</div>
-        
-    </div>
+        </section>
 
-
-
-
-
-    
+        <footer>
+            <p>Optimized for coding in 2024 | best laptop's you can find</p>
+        </footer>
+    </div>
 </body>
 </html>
